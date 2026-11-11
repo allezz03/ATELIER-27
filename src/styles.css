@@ -36,3 +36,18 @@
 .nav-trimap-arrow{display:grid;place-items:center;width:27px;height:27px;border-radius:4px;background:#70ddd5;color:#092f35;margin-left:4px;transition:transform .22s ease}
 .nav-trimap:hover .nav-trimap-arrow{transform:translate(2px,-2px)}
 @media(max-width:800px){.nav-trimap{width:100%;justify-content:flex-start;padding:10px 12px;background:#092f35;border:0;color:#fff}.nav-trimap-arrow{margin-left:auto}.nav-trimap-label small{font-size:7px}.nav-trimap-label b{font-size:12px}}
+
+/* Header TRIMAP CTA: logo fornito, testo richiesto e dimensioni allineate a "Parliamone" */
+.nav .nav-trimap{height:42px;min-height:42px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 18px;margin:0;border:0;border-radius:0;background:#092f35;color:#fff;font-size:12px;font-weight:700;line-height:1;white-space:nowrap;transition:background .2s ease,transform .2s ease;vertical-align:middle}
+.nav .nav-trimap:hover{background:#0d4248;transform:translateY(-1px);box-shadow:none}
+.nav .nav-trimap-logo{display:block;width:25px;height:25px;object-fit:contain;flex:0 0 auto}
+.nav .nav-trimap-arrow{width:15px;height:15px;flex:0 0 auto;color:#70ddd5;margin:0;transition:transform .2s ease}
+.nav .nav-trimap:hover .nav-trimap-arrow{transform:translate(2px,-2px)}
+@media(max-width:800px){
+  .nav .nav-trimap{width:100%;height:46px;min-height:46px;justify-content:center;padding:0 16px}
+  .nav .nav-trimap-logo{width:27px;height:27px}
+}
+
+@media(min-width:801px){
+  .nav .nav-contact,.nav .nav-trimap{width:160px;height:42px;min-height:42px;box-sizing:border-box;justify-content:center}
+}

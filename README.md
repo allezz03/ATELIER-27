@@ -88,3 +88,5 @@ Le immagini attualmente utilizzate sono immagini remote Unsplash: per una pubbli
 Il link esterno **Torna su TRIMAP** è presente nella testata di tutte le pagine e apre https://trimap.it in una nuova scheda.
 
 La CTA TRIMAP nell'header usa un trattamento dedicato ispirato al sito TRIMAP: fondo blu petrolio, accento turchese, marchio tipografico e freccia in un riquadro.
+
+La CTA nell'header include il logo TRIMAP fornito e la dicitura “Ritorna su TRIMAP”; ha altezza allineata al pulsante “Parliamone”. Il logo è in `public/trimap-logo.png`.

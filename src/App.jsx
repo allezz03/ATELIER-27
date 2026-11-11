@@ -28,9 +28,9 @@ function Header() {
         <NavLink to="/servizi" onClick={close} className={({isActive}) => isActive ? 'active' : ''}>Servizi</NavLink>
         <Link to="/contatti" className="nav-contact" onClick={close}>Parliamone <ArrowUpRight size={15}/></Link>
         <a href="https://trimap.it" className="nav-trimap" target="_blank" rel="noopener noreferrer" onClick={close}>
-          <span className="nav-trimap-mark">T<span>.</span></span>
-          <span className="nav-trimap-label"><small>SCOPRI ANCHE</small><b>TRIMAP</b></span>
-          <span className="nav-trimap-arrow"><ArrowUpRight size={14}/></span>
+          <img className="nav-trimap-logo" src="/trimap-logo.png" alt="" />
+          <span>Ritorna su TRIMAP</span>
+          <ArrowUpRight className="nav-trimap-arrow" size={15}/>
         </a>
       </nav>
       <span className="header-index">INTERIOR DESIGN STUDIO — ITALY</span>
