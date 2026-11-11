@@ -24,3 +24,15 @@
 .nav-trimap{display:inline-flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid #66d8d0;color:#0b4a4c;font-size:10px;font-weight:800;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
 .nav-trimap:hover{background:#092f35;color:#fff;border-color:#092f35}
 @media(max-width:800px){.nav-trimap{justify-content:space-between;padding:14px 16px;width:100%;background:#e0f5f1;border-color:#b5e7e0;color:#092f35}}
+
+/* TRIMAP brand-style header link */
+.nav-trimap{display:inline-flex;align-items:center;gap:9px;padding:6px 7px 6px 11px;border:1px solid rgba(9,47,53,.16);border-radius:7px;background:#092f35;color:#fff;white-space:nowrap;transition:transform .22s ease,box-shadow .22s ease,background .22s ease;border-bottom:0}
+.nav-trimap:hover{background:#0d4248;transform:translateY(-2px);box-shadow:0 7px 18px rgba(9,47,53,.16)}
+.nav-trimap-mark{font-family:Manrope,sans-serif;font-size:23px;line-height:1;font-weight:800;letter-spacing:-3px;color:#fff}
+.nav-trimap-mark span{color:#70ddd5}
+.nav-trimap-label{display:flex;flex-direction:column;gap:1px;line-height:1}
+.nav-trimap-label small{font-size:6px;letter-spacing:1.1px;font-weight:700;color:#a9cfcc}
+.nav-trimap-label b{font-family:Manrope,sans-serif;font-size:11px;letter-spacing:1.3px;font-weight:800;color:#fff}
+.nav-trimap-arrow{display:grid;place-items:center;width:27px;height:27px;border-radius:4px;background:#70ddd5;color:#092f35;margin-left:4px;transition:transform .22s ease}
+.nav-trimap:hover .nav-trimap-arrow{transform:translate(2px,-2px)}
+@media(max-width:800px){.nav-trimap{width:100%;justify-content:flex-start;padding:10px 12px;background:#092f35;border:0;color:#fff}.nav-trimap-arrow{margin-left:auto}.nav-trimap-label small{font-size:7px}.nav-trimap-label b{font-size:12px}}

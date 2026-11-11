@@ -86,3 +86,5 @@ Vercel gestisce automaticamente il routing delle pagine tramite la configurazion
 Le immagini attualmente utilizzate sono immagini remote Unsplash: per una pubblicazione commerciale definitiva, sostituiscile con immagini autorizzate dal cliente o con licenza adeguata.
 
 Il link esterno **Torna su TRIMAP** è presente nella testata di tutte le pagine e apre https://trimap.it in una nuova scheda.
+
+La CTA TRIMAP nell'header usa un trattamento dedicato ispirato al sito TRIMAP: fondo blu petrolio, accento turchese, marchio tipografico e freccia in un riquadro.
