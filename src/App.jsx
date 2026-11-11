@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ArrowDownRight, ArrowRight, ArrowUpRight, Menu, X, Instagram, MoveUpRight, Plus } from 'lucide-react'
 import { projects } from './data/projects'
 import { supabase } from './lib/supabase'
@@ -12,7 +12,6 @@ const fadeUp = {
 
 function Header() {
   const [open, setOpen] = useState(false)
-  const location = useLocation()
   const close = () => setOpen(false)
   return (
     <header className="header">
@@ -118,6 +117,20 @@ function Home() {
           <div className="section-label"><span>03 / COSA FACCIAMO</span><span>DALL’IDEA ALLA REALTÀ</span></div>
           <div className="services-row"><h2>Progettiamo<br/><em>possibilità.</em></h2><div className="service-list"><div><span>01</span><b>Interior design</b><ArrowUpRight/></div><div><span>02</span><b>Progettazione su misura</b><ArrowUpRight/></div><div><span>03</span><b>Consulenza e styling</b><ArrowUpRight/></div><Link to="/servizi" className="text-link">Scopri i servizi <ArrowRight size={17}/></Link></div></div>
         </section>
+        <section className="trimap-promo">
+          <div className="trimap-promo-top"><span className="eyebrow">UN PROGETTO FIRMATO TRIMAP</span><span className="trimap-symbol">T<span>.</span></span></div>
+          <div className="trimap-promo-content">
+            <div>
+              <p className="trimap-kicker">DAL DESIGN AL LANCIO</p>
+              <h2>Le idee migliori<br/>meritano uno spazio <em>online.</em></h2>
+            </div>
+            <div className="trimap-promo-copy">
+              <p>TRIMAP affianca aziende e professionisti nel loro percorso digitale: realizziamo siti web, portali e soluzioni software pensate per semplificare il lavoro e far crescere i progetti.</p>
+              <a className="trimap-button" href="https://trimap.it" target="_blank" rel="noopener noreferrer">Torna su TRIMAP <ArrowUpRight size={17}/></a>
+            </div>
+          </div>
+          <div className="trimap-promo-bottom"><span>WEB DESIGN · SOFTWARE · SOLUZIONI DIGITALI</span><span>TRIMAP.IT ↗</span></div>
+        </section>
       </main>
     </>
   )
@@ -199,5 +212,25 @@ function NotFound() { return <main className="not-found"><span className="eyebro
 
 export default function App() {
   const location = useLocation()
-  return <><Header/><AnimatePresence mode="wait"><motion.div key={location.pathname} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:.2}}><Routes><Route path="/" element={<Home/>}/><Route path="/studio" element={<Studio/>}/><Route path="/progetti" element={<Projects/>}/><Route path="/progetti/:id" element={<ProjectDetail/>}/><Route path="/servizi" element={<Services/>}/><Route path="/contatti" element={<Contact/>}/><Route path="*" element={<NotFound/>}/></Routes><Footer/></motion.div></AnimatePresence></>
+
+  // Navigazione immediata tra le route e ritorno all'inizio della nuova pagina.
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
+
+  return (
+    <>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/studio" element={<Studio/>}/>
+        <Route path="/progetti" element={<Projects/>}/>
+        <Route path="/progetti/:id" element={<ProjectDetail/>}/>
+        <Route path="/servizi" element={<Services/>}/>
+        <Route path="/contatti" element={<Contact/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
+      <Footer/>
+    </>
+  )
 }
