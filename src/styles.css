@@ -51,3 +51,51 @@
 @media(min-width:801px){
   .nav .nav-contact,.nav .nav-trimap{width:160px;height:42px;min-height:42px;box-sizing:border-box;justify-content:center}
 }
+
+
+/* Correzione finale pulsante TRIMAP nell'header */
+.nav a.nav-trimap {
+  box-sizing: border-box;
+  width: 160px;
+  min-width: 160px;
+  height: 42px;
+  min-height: 42px;
+  padding: 0 14px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav a.nav-trimap .nav-trimap-logo {
+  display: block;
+  width: 23px;
+  height: 23px;
+  margin: 0 2px 0 0;
+  padding: 0;
+  object-fit: contain;
+  flex: 0 0 23px;
+}
+
+.nav a.nav-trimap .nav-trimap-arrow {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .nav a.nav-trimap {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    min-height: 46px;
+    padding: 0 16px !important;
+    justify-content: center;
+  }
+
+  .nav a.nav-trimap .nav-trimap-logo {
+    width: 25px;
+    height: 25px;
+    flex-basis: 25px;
+  }
+}
