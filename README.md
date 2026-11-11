@@ -84,3 +84,5 @@ Vercel gestisce automaticamente il routing delle pagine tramite la configurazion
 - Integrazione Supabase: `src/lib/supabase.js`
 
 Le immagini attualmente utilizzate sono immagini remote Unsplash: per una pubblicazione commerciale definitiva, sostituiscile con immagini autorizzate dal cliente o con licenza adeguata.
+
+Il link esterno **Torna su TRIMAP** è presente nella testata di tutte le pagine e apre https://trimap.it in una nuova scheda.

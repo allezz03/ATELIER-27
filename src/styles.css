@@ -19,3 +19,8 @@
 .trimap-button:hover{transform:translateY(-3px);background:#a1eee8}
 .trimap-promo-bottom{border-top:1px solid rgba(245,242,235,.25);padding-top:18px;color:#9bb7b5;font-size:8px;letter-spacing:1.4px}
 @media(max-width:800px){.trimap-promo{padding:35px 6% 22px}.trimap-promo-content{grid-template-columns:1fr;gap:30px;padding:45px 0 50px}.trimap-promo h2{font-size:clamp(42px,10vw,65px)}.trimap-promo-copy p{max-width:500px}.trimap-promo-bottom{font-size:7px;letter-spacing:.8px}}
+
+/* Link TRIMAP sempre visibile nella testata di tutte le pagine */
+.nav-trimap{display:inline-flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid #66d8d0;color:#0b4a4c;font-size:10px;font-weight:800;white-space:nowrap;transition:background .2s,color .2s,border-color .2s}
+.nav-trimap:hover{background:#092f35;color:#fff;border-color:#092f35}
+@media(max-width:800px){.nav-trimap{justify-content:space-between;padding:14px 16px;width:100%;background:#e0f5f1;border-color:#b5e7e0;color:#092f35}}
